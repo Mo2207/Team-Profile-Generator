@@ -25,7 +25,6 @@ describe(('Employee'), () => {
   })
   describe(('getRole'), () => {
     it('should return the role of the employee', () => {
-      const role = 'Engineer';
       const result = new Employee('bob', 10, 'bob@email.com');
       expect(result.getRole()).toBe(Employee);
     })
