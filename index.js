@@ -133,7 +133,7 @@ function internPrompts() {
   .then((data) => {
     allInput.interns.push(data)
     if(data.otherEmployees == 'Engineer') {
-      if(!allInput.engineer) {
+      if(!allInput.engineers) {
         allInput.engineers = [];
       }
       engineerPrompts()
