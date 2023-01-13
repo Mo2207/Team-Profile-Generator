@@ -1,0 +1,60 @@
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: rgba(237, 237, 237, 0.766);
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em 0;
+  background-color: rgba(61, 61, 238, 0.794);
+  margin: 0;
+  height: 6em;
+}
+
+.employees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  margin: 1em 0.5em 1em;
+  background-color: rgba(97, 97, 231, 0.604);
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+.card-name {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+}
+
+a {
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+}
+
+#managerCard {
+  display: flex;
+  justify-content: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
