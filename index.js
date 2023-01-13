@@ -152,14 +152,16 @@ function generateHTML(input) {
     var engineerHTML = '';
     input.engineers.forEach(item => {
       engineerHTML += `
-  <div class="card" style="width: 18rem;">
-    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
+  <div class="card" style="width: 17rem;">
+    <img src="../images/blank-profile-picture.jpeg" class="card-img-top" alt="default profile picture">
     <div class="card-body">
-      <h5 class="card-title">${item.engineerName}</h5>
-      <p class="card-text">Employee id: ${item.engineerId}</p>
-      <p class="card-text">${item.engineerEmail}</p>
-      <p class="card-text">Github: ${item.engineerGithub}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Engineer <span class="material-symbols-outlined">
+      terminal
+      </span></h5>
+      <h3 class="card-name">${item.engineerName}</h3>
+      <p class="card-text">ID: ${item.engineerId}</p>
+      <p class="card-text">Email: ${item.engineerEmail}</p>
+      <a href="https://github.com/${item.engineerGithub}" class="btn btn-primary">Github</a>
     </div>
   </div>
   `
@@ -171,14 +173,16 @@ function generateHTML(input) {
     var internHTML = '';
     input.interns.forEach(item => {
       internHTML += `
-  <div class="card" style="width: 18rem;">
-    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
+  <div class="card" style="width: 17rem;">
+    <img src="../images/blank-profile-picture.jpeg" class="card-img-top" alt="default profile picture">
     <div class="card-body">
-      <h5 class="card-title">${item.internName}</h5>
-      <p class="card-text">Employee id: ${item.internId}</p>
-      <p class="card-text">${item.internEmail}</p>
+      <h5 class="card-title">Intern <span class="material-symbols-outlined">
+      school
+      </span></h5>
+      <h3 class="card-name">${item.internName}</h3>
+      <p class="card-text">ID: ${item.internId}</p>
+      <p class="card-text">Email: ${item.internEmail}</p>
       <p class="card-text">School: ${item.internSchool}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
   `
@@ -193,21 +197,35 @@ function generateHTML(input) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Our Team</title>
 </head>
 <body>
-  <div class="card" style="width: 18rem;">
-    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
+<div class="intro">
+  <h1>Our Team</h1>
+</div>
+<div class="employees">
+  <div class="card" style="width: 17rem;">
+    <img src="../images/blank-profile-picture.jpeg" class="card-img-top" alt="default profile picture">
     <div class="card-body">
-      <h5 class="card-title">${input.managerName}</h5>
-      <p class="card-text">Employee id: ${input.managerId}</p>
-      <p class="card-text">${input.managerEmail}</p>
-      <p class="card-text">Office Number: ${input.managerOfficeNumber}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Manager <span class="material-symbols-outlined">
+      coffee
+      </span></h5>
+      <h3 class="card-name">${input.managerName}</h3>
+      <p class="card-text">ID: ${input.managerId}</p>
+      <p class="card-text">Email: ${input.managerEmail}</p>
+      <p class="card-text">Office #${input.managerOfficeNumber}</p>
     </div>
   </div>
   ${engineerHTML || ''}
   ${internHTML || ''}
+</div>
 </body>
 </html>
 `
