@@ -151,7 +151,7 @@ function generateHTML(input) {
     // use var to declare variable outside of this if block as well
     var engineerHTML = '';
     input.engineers.forEach(item => {
-      engineerHTML = engineerHTML.concat(`
+      engineerHTML += `
   <div class="card" style="width: 18rem;">
     <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -162,7 +162,7 @@ function generateHTML(input) {
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  `)
+  `
     })
   }
 
@@ -170,7 +170,7 @@ function generateHTML(input) {
     // use var to declare variable outside of this if block as well
     var internHTML = '';
     input.interns.forEach(item => {
-      internHTML = internHTML.concat(`
+      internHTML += `
   <div class="card" style="width: 18rem;">
     <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -181,7 +181,7 @@ function generateHTML(input) {
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  `)
+  `
     })
   }
 
@@ -206,13 +206,13 @@ function generateHTML(input) {
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-  ${engineerHTML}
-  ${internHTML}
+  ${engineerHTML || ''}
+  ${internHTML || ''}
 </body>
 </html>
 `
 
-  fs.writeFile('index.html', html, (err) => {
+  fs.writeFile('./dist/index.html', html, (err) => {
     if (err)
       console.log(err);
     else {
