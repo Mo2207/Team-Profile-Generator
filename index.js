@@ -153,7 +153,7 @@ function generateHTML(input) {
     input.engineers.forEach(item => {
       engineerHTML = engineerHTML.concat(`
   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${item.engineerName}</h5>
       <p class="card-text">Employee id: ${item.engineerId}</p>
@@ -172,7 +172,7 @@ function generateHTML(input) {
     input.interns.forEach(item => {
       internHTML = internHTML.concat(`
   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${item.internName}</h5>
       <p class="card-text">Employee id: ${item.internId}</p>
@@ -197,7 +197,7 @@ function generateHTML(input) {
 </head>
 <body>
   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="./images/blank-profile-picture.jpeg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${input.managerName}</h5>
       <p class="card-text">Employee id: ${input.managerId}</p>
