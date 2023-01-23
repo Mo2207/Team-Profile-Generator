@@ -11,7 +11,7 @@ This project can be cloned into your project.
 
 ## Usage:
 
-A tutorial demonstration for this application can be viewed here: https://mega.nz/file/0YQk0YpT#lvbQMSM6OnFMWj2teXJy_rVKJTgVtweJCsl7XqxG2Ks
+A tutorial demonstration for this application can be viewed here: https://youtu.be/HHQIfv1IVa8
 
 !["inquirer prompts"](./images/inquirer-prompts.png)
 !["html page of employees"](./images/Employee-team.png)
